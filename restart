@@ -1,0 +1,7 @@
+git pull;
+
+export COMPOSE_PROJECT_NAME=solar-group_prod 
+
+docker compose -f docker-compose.yml down -v;
+docker compose -f docker-compose.yml up -d --build;
+docker compose -f docker-compose.yml logs -f --tail=100;
